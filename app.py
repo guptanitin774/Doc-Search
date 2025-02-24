@@ -6,7 +6,7 @@ from io import BytesIO
 from fpdf import FPDF
 
 # Set OpenAI API key (ensure this is set as a secret in Streamlit Cloud)
-openai.api_key = st.secrets["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"]
+openai.api_key = st.secrets[st.some_key]
 
 def analyze_data(df, query):
     """Uses OpenAI to extract insights from the dataset based on user query."""
